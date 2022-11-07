@@ -41,7 +41,7 @@
     background:linear-gradient(145deg, pink, purple);
 }
 .pokemon-card[data-tipoprimario="lendary"]{
-    animation: animarLendario 3s infinite 0.3s ease-in !important;
+    animation: animarLendario 1s infinite 0.3s ease-in !important;
 }
 
 

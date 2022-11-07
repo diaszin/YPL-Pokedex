@@ -95,15 +95,23 @@ function VerificarSeOPokemonJaEstaNaLista(pokemon){
 
 adicionarBTN.addEventListener("click", () => {
     var nomePokemonTXT = nomePokemon.value
-    if(VerificarSeOPokemonJaEstaNaLista(nomePokemonTXT.toLowerCase()) == true){
-        if (nomePokemonTXT.length > 2) {
-            AdicionarPokemonNaLista(nomePokemonTXT.toLowerCase())
-        }
-        else {
-            alert("Insira um nome !")
-        }
+    if(nomePokemonTXT.toLowerCase() === "poze"){
+        alert("Pra alcançar a tropa vai levar um tempo 🤑")
+        alert("Pra alcançar a tropa vai levar um tempo 🤑")
+        alert("Para com essa porra 🤬😡😡")
     }
     else{
-        alert("Esse pokemon já está na lista !!!")
+        if(VerificarSeOPokemonJaEstaNaLista(nomePokemonTXT.toLowerCase()) == true){
+            if (nomePokemonTXT.length > 2) {
+                AdicionarPokemonNaLista(nomePokemonTXT.toLowerCase())
+            }
+            else {
+                alert("Insira um nome !")
+            }
+        }
+        else{
+            alert("Esse pokemon já está na lista !!!")
+        }
     }
+    nomePokemon.value = ""
 })

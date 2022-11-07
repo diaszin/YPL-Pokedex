@@ -158,6 +158,10 @@ div#inputDiv{
         flex-flow: column nowrap;
     }
 
+    div#inputDiv{
+        position: sticky !important;
+    }
+
     div#container>div{
         height: 100px;
     }
