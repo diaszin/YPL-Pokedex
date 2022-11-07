@@ -69,49 +69,13 @@ div#inputDiv{
     align-items: center;
     padding: 12px;
     border-radius: 12px;
+    box-shadow: 4px 6px 3px darkgray;
 }
-.pokemon-card[data-tipoprimario="electric"]{
-    background-color: gold;
+
+.pokemon-card:last-of-type{
+    animation: animacaoCartaInserida 0.6s  ease-in; 
 }
-.pokemon-card[data-tipoprimario="dragon"]{
-    background-color: orange;
-}
-.pokemon-card[data-tipoprimario="water"]{
-    background: linear-gradient(45deg, aqua 30%, blue, darkblue);
-}
-.pokemon-card[data-tipoprimario="fire"]{
-    background:linear-gradient(145deg, orange, darkred);
-}
-.pokemon-card[data-tipoprimario="grass"]{
-    background:linear-gradient(45deg, green, lightgreen);
-}
-.pokemon-card[data-tipoprimario="bug"]{
-    background:linear-gradient(145deg, gold 20%, lightgreen);
-}
-.pokemon-card[data-tipoprimario="rock"]{
-    background:linear-gradient(145deg, gray, lightgray);
-}
-.pokemon-card[data-tipoprimario="normal"]{
-    background:linear-gradient(145deg, brown 60%, gray);
-}
-.pokemon-card[data-tipoprimario="ground"]{
-    background:linear-gradient(145deg, #684132, #d47b4a);
-}
-.pokemon-card[data-tipoprimario="poison"]{
-    background:linear-gradient(145deg, purple, darkgreen 70%);
-}
-.pokemon-card[data-tipoprimario="psychic"]{
-    background:linear-gradient(145deg, #b080d0, #7d45c7, #e7bee7 60%);
-}
-.pokemon-card[data-tipoprimario="fighting"]{
-    background:linear-gradient(145deg, darkred, brown, gray 60%);
-}
-.pokemon-card[data-tipoprimario="ice"]{
-    background:linear-gradient(145deg, darkblue, white 90%, darkblue);
-}
-.pokemon-card[data-tipoprimario="fairy"]{
-    background:linear-gradient(145deg, pink, purple);
-}
+
 
 .pokemon-img{
     width: 200px;
@@ -150,4 +114,56 @@ div#inputDiv{
 
 .pokemon-name{
     text-transform:capitalize;
+}
+
+@keyframes animacaoCartaInserida{
+    0%{
+        opacity: 0.2;
+        transform: translateX(150px);
+        transform: translateX(140px);
+        transform: skewY(30px);
+        
+    }
+    
+    50%{
+        opacity: 0.5;
+        transform: translateY(20px);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateY(10px);
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 726px) {
+    div#container{
+        flex-flow: column nowrap;
+    }
+
+    div#container>div{
+        height: 100px;
+    }
+    div#inputDiv{
+        width: 100% !important;
+    }
+    #lista-pokemons{
+        justify-items: center;
+        width: 100% !important;
+    }
+}
+@media screen and (max-width: 426px) {
+    div#container{
+        flex-flow: column nowrap;
+    }
+
+    div#container>div{
+        height: 100px;
+    }
+    #lista-pokemons{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        width: 100% !important;
+    }
 }

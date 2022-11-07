@@ -1,0 +1,75 @@
+.pokemon-card[data-tipoprimario="electric"]{
+    background-color: gold;
+}
+.pokemon-card[data-tipoprimario="dragon"]{
+    background-color: orange;
+}
+.pokemon-card[data-tipoprimario="water"]{
+    background: linear-gradient(45deg, aqua 30%, blue, darkblue);
+}
+.pokemon-card[data-tipoprimario="fire"]{
+    background:linear-gradient(145deg, orange, darkred);
+}
+.pokemon-card[data-tipoprimario="grass"]{
+    background:linear-gradient(45deg, green, lightgreen);
+}
+.pokemon-card[data-tipoprimario="bug"]{
+    background:linear-gradient(145deg, gold 20%, lightgreen);
+}
+.pokemon-card[data-tipoprimario="rock"]{
+    background:linear-gradient(145deg, gray, lightgray);
+}
+.pokemon-card[data-tipoprimario="normal"]{
+    background:linear-gradient(145deg, brown 60%, gray);
+}
+.pokemon-card[data-tipoprimario="ground"]{
+    background:linear-gradient(145deg, #684132, #d47b4a);
+}
+.pokemon-card[data-tipoprimario="poison"]{
+    background:linear-gradient(145deg, purple, darkgreen 70%);
+}
+.pokemon-card[data-tipoprimario="psychic"]{
+    background:linear-gradient(145deg, #b080d0, #7d45c7, #e7bee7 60%);
+}
+.pokemon-card[data-tipoprimario="fighting"]{
+    background:linear-gradient(145deg, darkred, brown, gray 60%);
+}
+.pokemon-card[data-tipoprimario="ice"]{
+    background:linear-gradient(145deg, darkblue, white 90%, darkblue);
+}
+.pokemon-card[data-tipoprimario="fairy"]{
+    background:linear-gradient(145deg, pink, purple);
+}
+.pokemon-card[data-tipoprimario="lendary"]{
+    animation: animarLendario 3s infinite 0.3s ease-in !important;
+}
+
+
+
+@keyframes animarLendario{
+    0%{
+        background: linear-gradient(45deg, white, pink, purple, blue);
+    }
+    20%{
+        background: linear-gradient(55deg, pink, purple, blue);
+        transform: translateX(1deg);
+        
+    }
+    40%{
+        background: linear-gradient(65deg, darkblue, green);
+        transform: skewY(1deg);
+        
+    }
+    50%{
+        background: linear-gradient(75deg, purple 50%, blue);
+        transform: translateX(-1deg);
+        
+    }
+    80%{
+        background: linear-gradient(75deg, gray, darkslateblue);
+        transform: skewY(-1deg);
+    }
+    100%{
+        background: linear-gradient(85deg, purple,blue, pink, white);
+    }
+}
